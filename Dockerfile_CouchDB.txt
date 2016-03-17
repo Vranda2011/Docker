@@ -14,7 +14,7 @@
  FROM debian:jessie 
  
  
- MAINTAINER Clemens Stolle klaemo@apache.org 
+ MAINTAINER Vranda Vyas <vranda.vyas88@gmail.com>
  
  
  # Install instructions from https://cwiki.apache.org/confluence/display/COUCHDB/Debian 

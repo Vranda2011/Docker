@@ -1,6 +1,6 @@
 FROM centos:centos6
 
-MAINTAINER Traun Leyden <tleyden@couchbase.com>
+MAINTAINER Vranda Vyas <vranda.vyas88@gmail.com>
 
 ENV CB_VERSION		3.0.1
 ENV CB_RELEASE_URL	http://packages.couchbase.com/releases

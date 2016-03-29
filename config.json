@@ -4,7 +4,7 @@
    "log":["REST"],
    "databases":{
       "sync_gateway":{
-         "server":"http://54.207.79.125:8091",
+         "server":"http://54.233.71.145:8091",
          "bucket":"sync_gateway",
          "sync":`function(doc) {channel(doc.channels);}`
       }

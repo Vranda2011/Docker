@@ -1,47 +1,25 @@
-FROM centos:centos7
+FROM debian:latest
+MAINTAINER Vranda Vyas
 
-MAINTAINER Vranda Vyas <vranda.vyas88@gmail.com>
+################## BEGIN INSTALLATION ######################
+ENV SYNC_GATEWAY_VERSION 1.0.3
+RUN export DEBIAN_FRONTEND=noninteractive && \
+  sed -i 's/# \(.*multiverse$\)/\1/g' /etc/apt/sources.list && \
+  apt-get update && \
+  apt-get -y upgrade && \
+  apt-get install -y wget && \
+  wget -q http://packages.couchbase.com/releases/couchbase-sync-gateway/${SYNC_GATEWAY_VERSION}/couchbase-sync-gateway-community_${SYNC_GATEWAY_VERSION}_x86_64.deb -O package.deb && \
+  dpkg -i package.deb && \
+  rm package.deb
 
-ENV GOPATH /opt/go
-ENV SGROOT /opt/sync_gateway
-ENV GOROOT /usr/local/go
-ENV PATH $PATH:$GOPATH/bin:$GOROOT/bin
+# Add configurations
+ENV PATH /opt/couchbase-sync-gateway/bin:$PATH
+ADD run.sh /run.sh
+RUN chmod +x /*.sh
+##################### INSTALLATION END #####################
 
-# Get dependencies
-RUN yum -y update && \
-    yum groupinstall -y development && \
-    yum install -y \
-    bc \
-    curl \
-    emacs-nox \
-    git \
-    mercurial \
-    wget 
-
-# Download and install Go
-RUN wget http://golang.org/dl/go1.5.2.linux-amd64.tar.gz && \
-    tar -C /usr/local -xzf go1.5.2.linux-amd64.tar.gz && \
-    rm go1.5.2.linux-amd64.tar.gz
-
-# install common go packages
-RUN go get github.com/tools/godep && \
-    go get github.com/nsf/gocode && \
-    go get golang.org/x/tools/cmd/goimports && \
-    go get github.com/golang/lint/golint && \
-    go get github.com/rogpeppe/godef
-
-# Build Sync Gateway
-RUN mkdir -p $GOPATH && \
-    cd /opt && \ 
-    git clone https://github.com/couchbase/sync_gateway.git && \
-    cd $SGROOT && \
-    git checkout 1.2.0 && \	
-    git submodule update --init --recursive && \
-    ./build.sh && \
-    cp bin/sync_gateway /usr/local/bin && \
-    mkdir -p $SGROOT/data
-
-ENTRYPOINT ["/usr/local/bin/sync_gateway"]
-
-# Expose ports
+# Documentation http://developer.couchbase.com/mobile/develop/guides/sync-gateway/index.html
 EXPOSE 4984 4985
+WORKDIR /opt/couchbase-sync-gateway
+ENTRYPOINT ["/run.sh"]
+CMD []

@@ -17,3 +17,4 @@ Step 7   To open the UI console on web
      7.1 Paste the pubic DNS or the public Ip on the adress bar with the port number of couchbase "Ex:xx.xx.xxx.xx:8091"
      7.2 Now we can configure the couchbase and create buckets as per our requirement
 
+

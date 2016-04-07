@@ -1,0 +1,25 @@
+curl -v -X POST http://54.233.71.145:8091/pools/default -d memoryQuota=300 -d indexMemoryQuota=300
+
+curl -v http://54.233.71.145:8091/node/controller/setupServices -d 'services=kv%2Cn1ql%2Cindex'
+
+curl -v -X POST http://54.233.71.145:8091/settings/web -d port=8091 -d username=Administrator -d password=password
+
+curl -v -u Administrator:password -X POST http://54.233.71.145:8091/sampleBuckets/install -d '["beer-sample"]'
+
+curl -u Administrator:password -H "Content-Type: application/json" -d '{"such":"json"}' http://54.233.71.145:4985/sync_gateway/
+
+curl -H "Content-type: application/json" -X POST \http://54.233.71.145:4984/beer-sample/_session --data \ \"{\"name\":\"Administrator\",\"password\":\"password\"}"
+
+curl -vX POST -H 'Content-Type: application/json' \ http://54.233.71.145:4984/sync_gateway/ \-d '{"name": "Administrator", "password": "password"}'
+
+curl -H "Content-type: application/json" -X POST \http://54.233.71.145:4984/beer-sample/\"{\"name\":\"Administrator\",\"password\":\"password\"}"
+
+curl -u Administrator:password -H "Content-Type: application/json" -d '{"such":"json"}' http://54.233.71.145:4984/sync_gateway/
+
+curl -u Administrator:password http://54.233.71.145:4984/sync_gateway/
+
+https://gist.github.com/Vranda2011/81f015a138a1a86d6f8f7e854743d25d.js
+
+"https://gist.githubusercontent.com/Vranda2011/81f015a138a1a86d6f8f7e854743d25d/raw/aa70e766cec9fdf3282e38e59e21c45ec1c5edbc/config.json"
+
+curl -X PUT 54.233.71.145:4984/sync_gateway/ \ '{"disabled":false, "admin_channels":[“public”]}'

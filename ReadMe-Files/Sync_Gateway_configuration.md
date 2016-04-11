@@ -44,6 +44,6 @@ Step 14: Open the console using
          
          We will see the welcome page of sync gateway in for of a json formatted file
          
-         b. http://public_dns;4985/_admin/
+         b. http://public_dns:4985/_admin/
          
          This will allow us to open the admin console of sync gateway and acccess the bucket or create  new documents in it

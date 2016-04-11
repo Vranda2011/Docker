@@ -1,4 +1,4 @@
-# Configuring Sync Gateway Using Docker
+# Configuring Sync Gateway with Couchbase Using Docker
 
 Steps to be followed are: 
 

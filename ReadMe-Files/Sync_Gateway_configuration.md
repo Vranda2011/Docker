@@ -12,6 +12,9 @@ Step 4: Open Github GIST and create a file called as Config.json (given here in 
 
 Step 5: Write the server configurations in that file (Here we need to map hostname and port of couchbase as we want to link them together)
 
+        Also we should make sure that the bucket should already be existing in the couchbase "here we have created bucket name         sync_gateway so, we will map the same in sync gateway config file"
+        
+
 Step 6: Save the file 
 
 Step 7: Click on the button named as "RAW" above the file (this will help execute the configuration of the json file)

@@ -18,3 +18,4 @@ Step 7   To open the UI console on web
      7.2 Now we can configure the couchbase and create buckets as per our requirement
 
 
+

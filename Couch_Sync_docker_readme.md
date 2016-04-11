@@ -26,5 +26,9 @@ Step 7   To open the UI console on web
 
      7.2 Now we can configure the couchbase and create buckets as per our requirement
 
+NOTE : allow connections to the following ports: 
+
+     11211, 11210, 11209, 4369,8091, 8092, 18091, 18092, 11214, 11215 and from 21100 to 21299.
+
 
 

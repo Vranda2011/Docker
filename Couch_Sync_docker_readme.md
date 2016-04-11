@@ -29,24 +29,24 @@ Step 7   To open the UI console on web
 NOTE : allow connections to the following ports: 
 
      11211, 11210, 11209, 4369,8091, 8092, 18091, 18092, 11214, 11215 and from 21100 to 21299.
-
-Port 8091: Used by the Couchbase Web Console for REST/HTTP traffic.
-
-Port 8092: Used to access views, run queries, XDCR,and update design documents.
-
-Port 11207: Used by smart client libraries to access data nodes using SSL.
-
-Port 11210: Used by smart client libraries or Moxi to directly connect to the data nodes.
-
-Port 11211: Used by pre-existing Couchbase and memcached (non-smart) client libraries.
-
-Ports 11214 and 11215 : Used for SSL XDCR data encryption.
-
-Port 18091: Used by the Couchbase Web Console for REST/HTTP traffic with SSL.
-
-Port 18092: Used to access views, run queries, XDCR and update design documents with SSL.
-
-All other Ports :Used for other Couchbase Server communications.
+     
+     Port 8091:     Used by the Couchbase Web Console for REST/HTTP traffic.
+     
+     Port 8092:     Used to access views, run queries, XDCR,and update design documents.
+     
+     Port 11207:    Used by smart client libraries to access data nodes using SSL.
+     
+     Port 11210:    Used by smart client libraries or Moxi to directly connect to the data nodes.
+     
+     Port 11211:    Used by pre-existing Couchbase and memcached (non-smart) client libraries.
+     
+     Ports 11214 and 11215 : Used for SSL XDCR data encryption.
+     
+     Port 18091:    Used by the Couchbase Web Console for REST/HTTP traffic with SSL.
+     
+     Port 18092:    Used to access views, run queries, XDCR and update design documents with SSL.
+     
+     All other Ports :Used for other Couchbase Server communications.
 
 
 

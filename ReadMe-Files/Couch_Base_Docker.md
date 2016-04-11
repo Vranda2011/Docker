@@ -40,6 +40,14 @@ NOTE : allow connections to the following ports:
      
      Port 11211:    Used by pre-existing Couchbase and memcached (non-smart) client libraries.
      
+ Now to Prepare couchbase to configure with sync gateway we need to follow some steps :
+ 
+ Step1:  Go to the console of couchbase
+ 
+ Step2:  Create a new bucket named as sync_gateway
+ 
+ And that is it...!
+     
      Ports 11214 and 11215 : Used for SSL XDCR data encryption.
      
      Port 18091:    Used by the Couchbase Web Console for REST/HTTP traffic with SSL.

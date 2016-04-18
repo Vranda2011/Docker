@@ -1,0 +1,26 @@
+couchbase:
+  image: couch_base
+  ports:
+    - 8091:8091
+  volumes_from:
+    - link_volume
+  environment:
+    BUCKET: sync_gateway
+    CB_USER: Administrator
+    CB_PASS: pasword
+
+couchdb:
+  image: couchdb
+  ports:
+    - 5984:5984
+    
+sync_gateway:
+  image: sync1
+  ports:
+    - 4984:4984
+    - 4985:4985
+
+odata:
+  image: joseph1994/couchbase-odata-connector-java
+  ports:
+    - 8888:8080

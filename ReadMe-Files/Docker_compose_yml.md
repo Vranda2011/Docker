@@ -58,7 +58,7 @@ Step 10: save and exit the file and build the image of sync gateway again
 
 Step 11: run "docker-compose up -d"
 
-Note: Also make sure that linking_volume container is always present in either running or stop state in docker as couchbase 
+Note: Also make sure that linking_volume container is always present in stop state in docker as couchbase 
       uses its volume to make default configurations.
       
 Step 12: You will have all the containers running on different ports now:

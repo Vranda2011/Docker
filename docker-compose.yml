@@ -13,14 +13,37 @@ couchdb:
   image: couchdb
   ports:
     - 5984:5984
+  links:
+    - cocuhbase
+    - sync_gateway
     
 sync_gateway:
   image: sync1
   ports:
     - 4984:4984
     - 4985:4985
-
+  links:
+    - couchbase
+    
+    
 odata:
   image: joseph1994/couchbase-odata-connector-java
   ports:
     - 8888:8080
+  links:
+    - couchbase
+    - sync_gateway
+    - couchdb
+    
+ionic:
+  tty: true
+  stdin_open: true
+  image: ionic
+  ports:
+    - 8100:8100
+  links:
+    - couchbase
+    - sync_gateway
+    - couchdb
+    - odata
+    

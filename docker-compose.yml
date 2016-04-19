@@ -14,7 +14,7 @@ couchdb:
   ports:
     - 5984:5984
   links:
-    - cocuhbase
+    - couchbase
     - sync_gateway
     
 sync_gateway:

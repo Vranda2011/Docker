@@ -3,14 +3,14 @@ couchbase:
   ports:
     - 8091:8091
   volumes_from:
-    - link_volume
+    - linking_volume
   environment:
     BUCKET: sync_gateway
     CB_USER: Administrator
     CB_PASS: pasword
 
 couchdb:
-  image: couchdb
+  image: couchdb_appconfig
   ports:
     - 5984:5984
   links:
@@ -18,7 +18,7 @@ couchdb:
     - sync_gateway
     
 sync_gateway:
-  image: sync1
+  image: sync_gateway
   ports:
     - 4984:4984
     - 4985:4985
@@ -38,7 +38,7 @@ odata:
 ionic:
   tty: true
   stdin_open: true
-  image: ionic
+  image: ionic_appconfig
   ports:
     - 8100:8100
   links:

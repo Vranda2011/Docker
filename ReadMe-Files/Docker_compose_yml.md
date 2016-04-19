@@ -37,9 +37,14 @@ Step 8: go to the terminal
 
 Step 9: open the run.sh file for sync gateway and copy the url in the file 
 
-       case "$1" in  *)         
+       case "$1" in  *)   
+       
        sync_gateway 
-       https://gist.githubusercontent.com/Vranda2011/81f015a138a1a86d6f8f7e854743d25d/raw/047c32c99323fb86374df355bf5099434deab478/config.json;;  // replace this URL with your gist URL 
+       
+       https://gist.githubusercontent.com/Vranda2011/81f015a138a1a86d6f8f7e854743d25d/raw/047c32c99323fb86374df355bf5099434deab
+       
+       478/config.json;;  // replace this URL with your gist URL 
+       
        esac}
         
 
@@ -53,9 +58,13 @@ Note: Also make suer that linking_volume container is always present in either r
 Step 12: You will have all the containers running on different ports now:
         
      couchbase:ElasticIp:8091
+     
      sync_gateway:ElasticIp:4985/_admin/
+     
      couchdb:ElasticIp:5984
+     
      odata:ElasticIp:8888
+     
      ionic:ElasticIp:8100
         
 Step 13: Now open all the required containers with the given ports on the web console 
@@ -63,15 +72,22 @@ Step 13: Now open all the required containers with the given ports on the web co
 Step 14: Testing can be done by:
 
      14.1  Open the Ionic App in web console and add data in that
+     
      14.2  Now run a curl command for continuous integration of couchdb with couchbase 
+     
            Command: 
            
      14.3  This will save the data to Couchbase server and also in couchdb client db
+     
      14.4  Now open the Odata in browser and make following configurtions to connect it to the couchbase server
            Uname: Uname of couchbase 
            Password: Paswword of couchbase
            Server IP: Elastic IP:8091  (Couchbase configuration)
+           
      14.5  Test the connection and try adding the tables, if the data sync is working: the bucket from couchbase will be             replicated in the odata console. And hence will be transfered to the Salesforce Application.
+     
+ Step 15: If the procedure works successfully that means you have made correct configurations and ready to work on the IOT     
+          Infrastructure for data replication from client db(device application database) 
       
 
 

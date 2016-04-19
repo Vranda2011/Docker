@@ -86,9 +86,11 @@ Step 14: Testing can be done by:
            Password: Paswword of couchbase
            Server IP: Elastic IP:8091  (Couchbase configuration)
            
-     14.5  Test the connection and try adding the tables, if the data sync is working: the bucket from couchbase will be     replicated in the odata console. And hence will be transfered to the Salesforce Application.
+     14.5  Test the connection and try adding the tables, if the data sync is working: the bucket from couchbase will be replicated in the odata console. And hence will be transfered to the Salesforce Application.
      
- Step 15: If the procedure works successfully that means you have made correct configurations and ready to work on the IOT   Infrastructure for data replication from client db(device application database) 
+ Step 15: If the procedure works successfully that means you have made correct configurations and ready to work on the IOT 
+ 
+ Infrastructure for data replication from client db(device application database) 
       
 
 

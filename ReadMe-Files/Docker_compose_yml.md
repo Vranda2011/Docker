@@ -10,7 +10,11 @@ Step 4: run the command "docker ps"
 
 Step 5: go to github gist of your github account
 
-Step 6: Copy the following code in a new config.json gist file
+       Note : Gists are a great way to share your work. You can share single files, parts of files, or full applications. You can access gists at https://gist.github.com.
+
+       Every gist is a Git repository, which means that it can be forked, cloned, and manipulated in every way.
+
+Step 6: Create a new gist file named as config.json amd copy the following code in it
 
        { 
     "interface":":4984", 
@@ -33,9 +37,11 @@ Step 6: Copy the following code in a new config.json gist file
 
 Step 7: get the RAW URL from the github for the config.json and copy it to the clipboard
 
+       Note: (look for the raw button on the top-right of the source code).
+
 Step 8: go to the terminal 
 
-Step 9: open the run.sh file for sync gateway and copy the url in the file 
+Step 9: open the run.sh file for sync gateway from the location /Docker/sync_gateway/run.sh and copy the url in the file 
 
        case "$1" in  *)   
        
@@ -52,20 +58,16 @@ Step 10: save and exit the file and build the image of sync gateway again
 
 Step 11: run "docker-compose up -d"
 
-Note: Also make suer that linking_volume container is always present in either running or stop state in docker as couchbase 
+Note: Also make sure that linking_volume container is always present in either running or stop state in docker as couchbase 
       uses its volume to make default configurations.
       
 Step 12: You will have all the containers running on different ports now:
-        
-     couchbase:ElasticIp:8091
-     
-     sync_gateway:ElasticIp:4985/_admin/
-     
-     couchdb:ElasticIp:5984
-     
-     odata:ElasticIp:8888
-     
-     ionic:ElasticIp:8100
+
+       couchbase:ElasticIp:8091
+       sync_gateway:ElasticIp:4985/_admin/
+       couchdb:ElasticIp:5984
+       odata:ElasticIp:8888
+       ionic:ElasticIp:8100
         
 Step 13: Now open all the required containers with the given ports on the web console 
 
@@ -84,10 +86,9 @@ Step 14: Testing can be done by:
            Password: Paswword of couchbase
            Server IP: Elastic IP:8091  (Couchbase configuration)
            
-     14.5  Test the connection and try adding the tables, if the data sync is working: the bucket from couchbase will be             replicated in the odata console. And hence will be transfered to the Salesforce Application.
+     14.5  Test the connection and try adding the tables, if the data sync is working: the bucket from couchbase will be     replicated in the odata console. And hence will be transfered to the Salesforce Application.
      
- Step 15: If the procedure works successfully that means you have made correct configurations and ready to work on the IOT     
-          Infrastructure for data replication from client db(device application database) 
+ Step 15: If the procedure works successfully that means you have made correct configurations and ready to work on the IOT   Infrastructure for data replication from client db(device application database) 
       
 
 

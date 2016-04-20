@@ -35,13 +35,13 @@ Step 6: Create a new gist file named as config.json amd copy the following code 
    } 
  } 
 
-Step 7: get the RAW URL from the github for the config.json and copy it to the clipboard
+Step 7: Get the RAW URL from the github for the config.json and copy it to the clipboard
 
        Note: (look for the raw button on the top-right of the source code).
 
-Step 8: go to the terminal 
+Step 8: Go to the terminal 
 
-Step 9: open the run.sh file for sync gateway from the location /Docker/sync_gateway/run.sh and replace the url in the file at the following location:
+Step 9: Open the run.sh file for sync gateway from the location /Docker/sync_gateway/run.sh and replace the url in the file at the following location:
 
        case "$1" in  *)   
        
@@ -54,17 +54,18 @@ Step 9: open the run.sh file for sync gateway from the location /Docker/sync_gat
        esac}
         
 
-Step 10: save and exit the file and build the image of sync gateway again 
+Step 10: Save and exit the file and build the image of sync gateway again 
 
 Step 11: Now you need to make some changes in the Ionic container so run the ionic container individually using the following command :
 
        docker run -it -p 8100:8100 image_name /bin/bash
        
        Step 11.1: Go to app.js which is in /Sensor-app/Sensor_zip/www/js location and find the two locations where an IP address is mapped, change it with your elastic IP and save the file. (Do not exit the container)
-        
+       
        Step 11.2: Open new terminal and do the following:
                   docker ps (copy the ionic container id)
-                  docker commit -p container_id new_name #this new name should be changed in the docker-compose.yml file
+                  docker commit -p container_id image_name
+                  
        Step 11.3: After creating an image out of the container you can stop and remove the container          
 
 Step 12: run "docker-compose up -d"
@@ -84,15 +85,22 @@ Step 14: Now open all the required containers with the given ports on the web co
 
 Step 15: Testing can be done by:
 
-     15.1  Open the Ionic App in web console and add data in that
+     15.1  Open the Ionic App and Couchbase in web browser and login using credentials.
+            Couchbase: Username-Administrator  Password-password
+            Ionic-application: Username- admin password- admin
+            
+     15.2  Go to the terminal and run docker-compose up -d
      
-     15.2  Now run a curl command for continuous integration of couchdb with couchbase 
-     
-           Command: 
+     15.3  Open couchdb console in browser and go to the replicator tab (right vertical menu) and do the following:
+           Source: local database (to be replicated) 
+           Destination: remote location of syn_gateway (http://elastic_IP:4985/bucket_name) 
+           Check the continuos checkbox and click on replicate button.
            
-     15.3  This will save the data to Couchbase server and also in couchdb client db
+     15.4  For the replication testing, data must be inserted in the application. 
+           
+     15.5  If the replication is successful the data will be saved in the Couchbase server(making the replicas in the couchdb client db and sync gateway of the same)
      
-     15.4  Now open the Odata in browser and make following configurtions to connect it to the couchbase server
+     15.6  Now open the Odata in browser and click the Manager App button(uname: admin, password: admin) make following configurtions to connect it to the couchbase server
            Uname: Uname of couchbase 
            Password: Paswword of couchbase
            Server IP: Elastic IP:8091  (Couchbase configuration)
@@ -101,7 +109,7 @@ Step 15: Testing can be done by:
      
  Step 16: If the procedure works successfully that means you have made correct configurations and ready to work on the IOT 
  
- Infrastructure for data replication from client db(device application database) 
+ Infrastructure for data replication from Ionic Application. 
       
 
 

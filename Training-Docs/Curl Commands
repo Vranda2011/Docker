@@ -23,3 +23,6 @@ https://gist.github.com/Vranda2011/81f015a138a1a86d6f8f7e854743d25d.js
 "https://gist.githubusercontent.com/Vranda2011/81f015a138a1a86d6f8f7e854743d25d/raw/aa70e766cec9fdf3282e38e59e21c45ec1c5edbc/config.json"
 
 curl -X PUT 54.233.71.145:4984/sync_gateway/ \ '{"disabled":false, "admin_channels":[“public”]}'
+
+
+curl -H 'Content-Type: application/json' -X POST http://localhost:5984/_replicate -d ' {"source": "http://localhost:5984/test1", "target": "http://52.6758.20:4985/sync_gateway", "create_target": true, "continuous": true} '

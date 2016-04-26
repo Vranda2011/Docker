@@ -35,4 +35,4 @@ EXPOSE 8100 35729
 VOLUME /workspace
 COPY /entrypoint.sh /
 RUN chmod +x /*.sh
-ENTRYPOINT ["/entrypoint.sh"]
+#ENTRYPOINT ["/entrypoint.sh"]

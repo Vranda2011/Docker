@@ -33,6 +33,6 @@ RUN echo y | android update sdk --all --no-ui --filter platform-tools,tools,buil
 RUN apt-get install -y git unzip
 EXPOSE 8100 35729
 VOLUME /workspace
-COPY /entrypoint.sh /
+COPY entrypoint.sh /
 RUN chmod +x /*.sh
 #ENTRYPOINT ["/entrypoint.sh"]

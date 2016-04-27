@@ -14,7 +14,7 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
 
 # Add configurations
 ENV PATH /opt/couchbase-sync-gateway/bin:$PATH
-ADD config.json /opt/couchbase-sync-gateway/bin/config.json
+ADD sync_gateway.json /opt/couchbase-sync-gateway/bin/sync_gateway.json
 #RUN chmod +x /*.sh
 ##################### INSTALLATION END #####################
 
@@ -22,4 +22,4 @@ ADD config.json /opt/couchbase-sync-gateway/bin/config.json
 EXPOSE 4984 4985
 WORKDIR /opt/couchbase-sync-gateway/bin
 #ENTRYPOINT ["/run.sh"]
-CMD ["/opt/couchbase-sync-gateway/bin/sync_gateway","/opt/couchbase-sync-gateway/bin/config.json"]
+CMD ["/opt/couchbase-sync-gateway/bin/sync_gateway","/opt/couchbase-sync-gateway/bin/sync_gateway.json"]

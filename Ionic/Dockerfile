@@ -31,7 +31,7 @@ RUN npm install -g ionic
 RUN npm install -g cordova
 ENV PATH ${PATH}:/opt/tools
 RUN echo ANDROID_HOME="${ANDROID_HOME}" >> /etc/environment
-RUN echo y | android update sdk --all --no-ui --filter platform-tools,tools,build-tools-23.0.1,android-23,addon-google_apis_x86-google-23,extra-android-support,extra-android-m2repository,extra-google-m2repository,sys-img-x86-android-23
+RUN echo y | android update sdk --all --no-ui --filter platform-tools,tools,build-tools-23.0.1,android-23
 RUN echo y | ionic start ionic-demo sidemenu
 RUN cd /ionic-demo
 #ionic platform add android && \

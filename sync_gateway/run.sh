@@ -5,7 +5,7 @@ main() {
   set -o pipefail
 
   case "$1" in
-  *)               sync_gateway https://gist.githubusercontent.com/Vranda2011/81f015a138a1a86d6f8f7e854743d25d/raw/047c32c99323fb86374df355bf5099434deab478/config.json;;
+  *)               sync_gateway https://gist.githubusercontent.com/samhitha30/4a88a8686cbe1363ba2e61410e4b3ad5/raw/0c9da9df48dcea08c42f0601e8b500bdc49b2689/config.json;;
   esac
 }
 

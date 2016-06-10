@@ -6,7 +6,16 @@
        "sync_gateway":{ 
           "server":"http://52.67.20.14:8091", 
           "bucket":"sync_gateway", 
-          "sync":`function(doc) {channel(doc.channels);}`,
+          "sync":`function(doc) {
+              if(doc.deviceid == "a0M9000000Fshpu")
+              channel("device:1 -"+doc.deviceid);
+              else
+              throw({forbidden : "Items must have a list_id"})
+          }`,
+          "shadow": {
+              "server":"http://52.67.20.14:8091",
+              "bucket":"myapp"
+          },
           "users": {
                 "GUEST": {
                     "disabled": false,

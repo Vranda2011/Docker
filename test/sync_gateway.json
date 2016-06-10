@@ -3,9 +3,9 @@
     "adminInterface":":4985", 
     "log":["REST"], 
     "databases":{ 
-       "sync_gateway":{ 
+       "sensor":{ 
           "server":"http://52.67.20.14:8091", 
-          "bucket":"sync_gateway", 
+          "bucket":"sensor", 
           "sync":`function(doc) {
               if(doc.deviceid == "a0M9000000Fshpu")
               channel("device:1 -"+doc.deviceid);

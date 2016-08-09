@@ -1,0 +1,75 @@
+
+https://archive.apache.org/dist/httpd/httpd-2.4.18.tar.bz2
+
+command to see the version 
+rpm -q httpd
+
+yum install apache2.4.18
+    2  wget https://archive.apache.org/dist/httpd/httpd-2.4.18.tar.bz2
+    3  apt-get https://archive.apache.org/dist/httpd/httpd-2.4.18.tar.bz2
+    4  yum apt-get https://archive.apache.org/dist/httpd/httpd-2.4.18.tar.bz2
+    5  yum https://archive.apache.org/dist/httpd/httpd-2.4.18.tar.bz2
+    6  yum install httpd
+    7  rpm -q httpd
+    8  rpmbuild -tb httpd-2.4.6-40.el7_2.4.x86_64
+    9  rpm-ivh httpd-2.4.6-40.el7_2.4.x86_64
+   10  service httpd status
+   11  service httpd start
+   12  service httpd status
+   13  ./configure
+   14  ls
+   15  cd ~
+   16  ls
+   17  find / -name httpd-2.4.6-40.el7_2.4.x86_64
+   18  find / -name httpd-2.4.6-40.el7_2.4.x86_64
+   19  cd /
+   20  find / -name httpd-2.4.6-40.el7_2.4.x86_64
+   21  exit
+   22  find / -name httpd-2.4.6-40.el7_2.4.x86_64
+   23  yum install wget 
+   24  wget  https://archive.apache.org/dist/httpd/httpd-2.4.18.tar.bz2
+   25  yum install httpd-2.4.18.tar.bz2
+   26  ls
+   27  tar zxf httpd-2.4.18.tar.bz2
+   28  tar zxf httpd-2.4.18.tar.bz2
+   29  rpm install  httpd-2.4.18.tar.bz2
+   30  tar xf httpd-2.4.18.tar.bz2
+   31  yum install -y -q httpd2418-httpd
+   32  yum install -y -q httpd24-httpd
+   33  rpm -q httpd
+   34  yum list -C httpd24-mod_\*
+   35  find / -name httpd.conf
+   36  cat /etc/httpd/conf/httpd.conf
+   37  find / -name mod_proxy.so
+   38  find / -name mod_proxy_http.so
+   39  ls /usr/lib64/httpd/
+   40  cd modules
+   41  cd /usr/lib64/httpd/modules/
+   42  ls
+   43  find / -name httpd.conf
+   44  cat /usr/lib/tmpfiles.d/httpd.conf
+   45  cat /etc/httpd/conf/httpd.conf
+   46  vi /etc/httpd/conf/httpd.conf
+   47  service httpd restart
+   48  service httpd status
+   49  vi /etc/httpd/conf/httpd.conf
+   50  service httpd restart
+   51  service httpd status
+   52  find / -name libxml2
+   53  find / -name libxml2.so
+   54* 
+   55  vi /etc/httpd/conf/httpd.conf
+   56  cat /etc/apache2/sites-enabled/000-default.conf
+   57  find / -name 000-default.conf
+   58  a2enmod
+   59  vi /etc/httpd/conf/httpd.conf
+   60  service httpd restart
+   61  service httpd status
+   62  vi /etc/httpd/conf/httpd.conf
+   63  service httpd restart
+   64  service httpd status
+   65  vi /etc/httpd/conf/httpd.conf
+   66  service httpd restart
+   67  service httpd status
+   68  cd /var/log/httpd/error_log
+   69  find / -name *log

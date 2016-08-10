@@ -4,3 +4,14 @@ http://jenkinsheaven.blogspot.in/2015/09/running-jasmine-js-tests-on-jenkins.htm
 
 
 30202a53db3a46818752a5a6929b972c
+
+I solved it. Here's what I did.
+
+I disabled security in JENKINS_HOME/config.xml
+Restarted Tomcat
+I re-enabled security
+Selected Jenkin's own database and also checked Allow users to Sign-up (Also make sure that in Authorization, "Anyone can do anything" is ticked.)
+"Save". After clicking Save, it will bring you to the initial page, then on the top-right corner there is a "Sign up" link.
+Click on "Sign up", enter your username and password then log-in. Right now you are the only registered user. But it actually did something else. Prior to the creation of your first account, there is no "Manage users" in the "Manage Jenkins" menu. I saw this guide on adding users to Jenkins and it says that there should be a "Manage users" link under the "Manage Jenkins" menu but there is none. But after you have created your first account (using Sign up), you can now find it there.
+Add users on the "Manage users" and then go back to "Manage security" then disable "Allow users to sign up". Also, you can now use Matrix based authentication without having to worry about getting locked out of Jenkins.
+I hope someone can find this useful.

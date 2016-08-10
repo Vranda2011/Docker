@@ -2,7 +2,11 @@
 
 http://jenkinsheaven.blogspot.in/2015/09/running-jasmine-js-tests-on-jenkins.html
 
+Jenkins Installation 
+https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+Red+Hat+distributions
 
+CI/CD
+http://code.tutsplus.com/tutorials/setting-up-continuous-integration-continuous-deployment-with-jenkins--cms-21511
 30202a53db3a46818752a5a6929b972c
 
 I solved it. Here's what I did.

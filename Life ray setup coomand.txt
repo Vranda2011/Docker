@@ -1,0 +1,115 @@
+[root@ip-10-0-0-42 bin]# history
+    1  cd /home/ec2-user
+    2  ls
+    3  rm -rf liferay-ce-portal-tomcat-7.0-ga2-20160610113014153
+    4  ls
+    5  ll
+    6  ls
+    7  rm -r liferay-ce-portal-7.0-ga2/
+    8  clear
+    9  ls
+   10  rm -rf liferay-ce-portal-7.0-ga2/
+   11  ls
+   12  clear
+   13  ls
+   14  yum install unzip
+   15  ls
+   16  unzip liferay-ce-portal-tomcat-7.0-ga2-20160610113014153.zip
+   17  ls
+   18  cd liferay-ce-portal-7.0-ga2 /o[t
+   19  cd opt
+   20  cd /opt
+   21  cd /ec2-user
+   22  cd /home/ec2-user
+   23  ls
+   24  mv liferay-ce-portal-7.0-ga2 /opt
+   25  ls
+   26  cd /opt
+   27  ls
+   28  cd liferay-ce-portal-7.0-ga2
+   29  ls
+   30  cd tomcat-8.0.32/
+   31  ls
+   32  cd bin
+   33  ls
+   34  startup.sh
+   35  ./startup.sh
+   36  sh startup.sh
+   37  cd /home/user/tomcat
+   38  cd /home/ec2-user/tomcat
+   39  cp startup.sh startup.sh_bkp
+   40  vi startup.sh
+   41  ./startup.sh
+   42  netstat -antlp
+   43  find / -iname catalina.out
+   44  vi /opt/liferay-ce-portal-7.0-ga2/tomcat-8.0.32/logs/catalina.out
+   45  cd /opt
+   46  #wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u91-b14/jdk-8u91-linux-x64.tar.gz"
+   47  wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u91-b14/jdk-8u91-linux-x64.tar.gz" && tar xzf jdk-8u91-linux-x64.tar.gz
+   48  yum install wget
+   49  wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u91-b14/jdk-8u91-linux-x64.tar.gz" && tar xzf jdk-8u91-linux-x64.tar.gz
+   50  cd /opt/jdk1.8.0_91/ && alternatives --install /usr/bin/java java /opt/jdk1.8.0_91/bin/java 2 && alternatives --config java
+   51  pwd
+   52  alternatives --install /usr/bin/jar jar /opt/jdk1.8.0_91/bin/jar 2 && alternatives --install /usr/bin/javac javac /opt/jdk1.8.0_91/bin/javac 2 && alternatives --set jar /opt/jdk1.8.0_91/bin/jar && alternatives --set javac /opt/jdk1.8.0_91/bin/javac
+   53  java -version
+   54  sed '$ a export JAVA_HOME=/opt/jdk1.8.0_91' /etc/profile
+   55  cat /etc/profile
+   56  sed -i '$ a export JAVA_HOME=/opt/jdk1.8.0_91' /etc/profile
+   57  cat /etc/profile
+   58  sed -i '$ a export JRE_HOME=/opt/jdk1.8.0_91/jre' /etc/profile
+   59  sed -i '$ a export PATH=$PATH:/opt/jdk1.8.0_91/bin:/opt/jdk1.8.0_91/jre/bin' /etc/profile
+   60  cat /etc/profile
+   61  cat /etc/source/profile
+   62  source /etc/profile
+   63  cd ...
+   64  cd ..
+   65  history
+   66  cd /bin
+   67  ls
+   68  pwd
+   69  cd /opt
+   70  ls
+   71  cd liferay-ce-portal-7.0-ga2/
+   72  ls
+   73  cd tomcat-8.0.32/
+   74  ls
+   75  cd bin
+   76  ls
+   77  ./startup.sh
+   78  find / -iname catalina.out
+   79  tail -f /opt/liferay-ce-portal-7.0-ga2/tomcat-8.0.32/logs/catalina.out
+   80  vi catalina.sh
+   81  echo $JAVA_HOME
+   82  which java
+   83  file /bin/java
+   84  file /etc/alternatives/java
+   85  vim catalina.sh
+   86  vi catalina.sh
+   87  cat /etc/profile
+   88  vi catalina.sh
+   89  ./catalina.sh
+   90  ./startup.sh
+   91  tail -f /opt/liferay-ce-portal-7.0-ga2/tomcat-8.0.32/logs/catalina.out
+   92  bash -x startup.sh
+   93  cd /opt/jdk1.8.0_91/
+   94  ls
+   95  cd bin/
+   96  ls
+   97  cd ..
+   98  cd jre/
+   99  ls
+  100  cd bin/
+  101  ls
+  102  cd ..
+  103  pwd
+  104  vi /etc/profile
+  105  cd /opt/liferay-ce-portal-7.0-ga2/tomcat-8.0.32/bin/
+  106  vi catalina.sh
+  107  ps -ef |grep java
+  108  cat /etc/profile
+  109  vi catalina.sh
+  110  bash -x startup.sh
+  111  ps -ef |grep java
+  112  tail -f /opt/liferay-ce-portal-7.0-ga2/tomcat-8.0.32/logs/catalina.out
+  113  history
+[root@ip-10-0-0-42 bin]#

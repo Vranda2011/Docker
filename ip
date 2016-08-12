@@ -1,5 +1,24 @@
 54.186.57.88
 
+
+Simple solution (step by step) is here !
+
+1)Add xUnit Plugin to Jenkins
+
+2)Add these below sample code Execute Windows Batch Command under build section (Command) of Jenkins.
+javac xyxTest.java //compile your test class 
+java xyzTest // run your test class
+
+3) Add "Publish Junit test result report" 
+
+Here is the link ,where you will find details of it.
+
+http://www.tutorialspoint.com/jenkins/jenkins_unit_testing.htm
+
+Hope it will help!
+
+
+
 http://jenkinsheaven.blogspot.in/2015/09/running-jasmine-js-tests-on-jenkins.html
 
 Jenkins Installation 
